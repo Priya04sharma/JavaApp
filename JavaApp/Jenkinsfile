@@ -2,14 +2,14 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_CREDENTIALS_ID = 'dockerhub-credentials'  // Set your Jenkins DockerHub credentials ID here
-        DOCKER_IMAGE = 'your-dockerhub-username/your-image-name'  // Replace with your DockerHub username and image name
+        DOCKER_CREDENTIALS_ID = 'dockerhub-credentials'  // Ensure this matches your actual Jenkins credentials ID for DockerHub
+        DOCKER_IMAGE = 'ps9778228/simple-java-app'  // Using your DockerHub username and a simple image name
     }
 
     stages {
         stage('Clone Repository') {
             steps {
-                git branch: 'main', url: 'https://github.com/yourusername/your-repo.git' // Replace with your GitHub repo URL and branch
+                git branch: 'main', url: 'https://github.com/yourusername/your-repo.git' // Replace with your actual GitHub repo URL and branch
             }
         }
 
